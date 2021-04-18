@@ -1,24 +1,38 @@
-# README
+### Search on Github - Airan Loth Telles
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Aplicação em Ruby on Rails para pesquisar e listar os top 5 repositórios de 5 linguagens escolhidas pelo usuário.
 
-Things you may want to cover:
+## Instruções para utilizar a aplicação no ambiente local
 
-* Ruby version
+#### .env
+Deve ser criado um arquivo .env seguindo o exemplo abaixo:
+```
+DATABASE_NAME=
+DATABASE_USER=
+DATABASE_PASSWORD=
+DATABASE_HOST=
+DATABASE_PORT=
+GITHUB_PRIVATE_KEY=
+```
+GITHUB_PRIVATE_KEY é o token de autenticação gerado pelo github, em Settings -> Developer Settings -> Personal access tokens -> Generate new token.
 
-* System dependencies
+#### Docker
 
-* Configuration
+###### Buildar o projeto
+```
+docker-compose build
+```
+##### Subir o ambiente do Docker Compose
 
-* Database creation
+```
+docker-compose up
+```
 
-* Database initialization
+##### Configurar e rodar as migrações do banco de dados, juntamente ao seed
+```
+docker-compose exec app bundle exec rake db:setup db:migrate db:seed
+```
 
-* How to run the test suite
+##### Endereço de acesso local
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+http://localhost:3000/
