@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Language, type: :model do
+RSpec.describe Repository, type: :model do
   let(:repository) { create(:repository) }
 
   context '#create' do
