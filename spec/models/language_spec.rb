@@ -14,7 +14,7 @@ RSpec.describe Language, type: :model do
     end
 
     it 'will be invalid if your name already exists' do
-      language_2 = build(:language, name: language.name)
+      language_2 = build(:language, name: language_1.name)
       expect(language_2).to_not be_valid
     end
   end
