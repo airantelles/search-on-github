@@ -11,6 +11,6 @@ FactoryBot.define do
     default_branch { "MyString" }
     homepage { "MyString" }
     external_id { 1 }
-    language { nil }
+    language
   end
 end
