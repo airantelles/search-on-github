@@ -1,10 +1,10 @@
-### Search on Github - Airan Loth Telles
+## Search on Github - Airan Loth Telles
 
 Aplicação em Ruby on Rails para pesquisar e listar os top 5 repositórios de 5 linguagens escolhidas pelo usuário.
 
 ## Instruções para utilizar a aplicação no ambiente local
 
-#### .env
+## .env
 Deve ser criado um arquivo .env seguindo o exemplo abaixo:
 ```
 DATABASE_NAME=
@@ -16,21 +16,27 @@ GITHUB_PRIVATE_KEY=
 ```
 GITHUB_PRIVATE_KEY é o token de autenticação gerado pelo github, em Settings -> Developer Settings -> Personal access tokens -> Generate new token.
 
-#### Docker
+## Docker
 
-###### Buildar o projeto
+## Buildar o projeto
 ```
 docker-compose build
 ```
-##### Subir o ambiente do Docker Compose
+
+## Subir o ambiente do Docker Compose
 
 ```
 docker-compose up
 ```
 
-##### Configurar e rodar as migrações do banco de dados, juntamente ao seed
+## Configurar e rodar as migrações do banco de dados, juntamente ao seed
 ```
-docker-compose exec app bundle exec rake db:setup db:migrate db:seed
+docker-compose exec app bundle exec bin/rails db:setup db:migrate db:seed
+```
+
+## Rodar os testes da aplicação
+```
+docker-compose exec app bundle exec bin/rails spec
 ```
 
 ##### Endereço de acesso local
